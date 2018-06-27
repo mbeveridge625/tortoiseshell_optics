@@ -3,3 +3,57 @@ html{
   font-family: Helvetica;
   line-height: 1.4;
 }
+
+/*Header styles*/
+header{;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./images/glasses-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30rem;
+  width: 100%;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: cadetblue;
+  width: 960px;
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  color: white;
+  width: auto;
+  margin: 1rem 0rem;
+}
+
+.logo img{
+  height: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+.nav a{
+  text-decoration: none;
+  color: white;
+  margin-right: 2rem;
+}
+
+.tagline{
+  align-self: flex-end;
+  background-color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 1.5rem 5rem;
+  margin-top: 10rem;
+  margin-right: 13rem;
+}
