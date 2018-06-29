@@ -5,7 +5,7 @@ html{
 }
 
 /*Header styles*/
-header{;
+header{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,4 +56,50 @@ header{;
   padding: 1.5rem 5rem;
   margin-top: 10rem;
   margin-right: 13rem;
+}
+
+/*Main styles*/
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.offerings{
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  height: 8rem;
+  width: 960px;
+}
+
+.tall{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 3.5rem;
+  height: 8rem;
+}
+
+.tall img{
+  max-width: 100%;
+}
+
+.wide{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 5rem;
+  height: 8rem;
+  margin-left: 6rem;
+}
+
+.wide img{
+  max-width: 100%
 }
