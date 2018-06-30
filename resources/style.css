@@ -1,126 +1,240 @@
+/*Universal styles*/
 html{
   font-size: 18px;
   font-family: Helvetica;
+}
+
+body{
   line-height: 1.4;
+}
+
+.container{
+  width: 960px;
+  margin: auto;
+}
+
+.flex{
+  display: flex
 }
 
 /*Header styles*/
 header{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: url("./images/glasses-bg.png");
+  background-image: url(./images/glasses-bg.png);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   height: 30rem;
-  width: 100%;
+  padding-top: 1rem;
 }
 
-.title{
+nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: cadetblue;
-  width: 960px;
-  height: 3rem;
-  margin-top: 1rem;
+  color: white;
+  font-size: 1rem;
 }
 
-.logo{
+nav div{
   display: flex;
   align-items: center;
-  color: white;
-  width: auto;
-  margin: 1rem 0rem;
 }
 
-.logo img{
+nav img{
   height: 1.5rem;
-  margin-left: 2rem;
-  margin-right: 1rem;
+  margin: 1rem 1rem 1rem 2rem;
 }
 
-.nav a{
-  text-decoration: none;
-  color: white;
+nav li{
+  display: inline-block;
   margin-right: 2rem;
 }
 
+nav a{
+  text-decoration: none;
+  color: white;
+}
+
+.hidden-menu{
+  display: none;
+}
+
+header .flex{
+  justify-content: flex-end;
+}
+
 .tagline{
-  align-self: flex-end;
+  margin-top: 10rem;
+  margin-right: -2rem;
+  padding: 1.5rem 5rem;
   background-color: white;
+}
+
+.tagline p{
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.2;
-  padding: 1.5rem 5rem;
-  margin-top: 10rem;
-  margin-right: 13rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    height: 22rem;
+    padding-top: 0;
+  }
+
+  nav .container {
+    max-width: 100%;
+  }
+
+  .tagline {
+    padding: 0.75rem 4rem;
+    margin-top: 5rem;
+    margin-right: 2rem;
+  }
+
+  .tagline p {
+    font-size: 1.33rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .menu ul {
+    display: none;
+  }
+
+  .menu ul .hidden-menu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  header div span {
+    display: none;
+  }
+
+  header {
+    background-position: 20%;
+    height: 17rem;
+  }
+
+  .tagline {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 9rem auto 0 auto;
+    text-align: center;
+  }
+
+  .tagline p {
+    font-size: 1rem;
+  }
 }
 
 /*Main styles*/
-main{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-}
-
-.offerings{
+.info{
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  height: 8rem;
-  width: 960px;
 }
 
-.tall{
+@media only screen and (max-width: 560px) {
+  .info {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3rem;
+  }
+}
+
+/*Offering styles*/
+
+.offering{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
-  width: 3.5rem;
-  height: 8rem;
-}
-
-.tall img{
-  max-width: 100%;
-}
-
-.wide{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
   width: 5rem;
   height: 8rem;
-  margin-left: 6rem;
+  margin: 3rem;
+  text-align: center;
 }
 
-.wide img{
-  max-width: 100%
+.offering img{
+  width: 5rem;
+  margin-bottom: 1rem;
 }
 
-/*Footer style*/
+.offering img.paper{
+  width: 3.5rem;
+}
+
+@media only screen and (max-width: 560px) {
+  .offering {
+    height: auto;
+    margin: .77rem;
+    font-size: .77rem;
+  }
+}
+
+/*About styles*/
+
+.about {
+  width: 35%;
+  margin-right: 5%;
+  margin-bottom: 5rem;
+}
+
+.about p {
+  padding: 1rem 0;
+}
+
+.title {
+  max-width: 10rem;
+  padding: 0.5rem 1.25rem;
+  background-color: cadetblue;
+  font-weight: bold;
+  color: white;
+}
+
+@media only screen and (max-width: 560px) {
+  .info {
+    width: 100%;
+  }
+
+  .about .title {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .about p {
+    padding: 1rem;
+    font-size: .77rem;
+  }
+}
+
+/*Footer styles*/
+
 footer{
   display: flex;
-  justify-content: center;
-  height: auto;
-  width: auto;
-}
-
-.copyright{
-  display: flex;
   align-items: center;
-  margin-top: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background-color: azure;
-  width: 960px;
 }
 
-.copyright img{
+footer img{
   height: 1.5rem;
-  margin: 4rem 1rem 4rem 4rem;
+  margin-left: 4rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 560px) {
+  footer {
+    justify-content: center;
+  }
+
+  footer div {
+    display: none;
+  }
 }
